@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct ItemView: View {
+    
+    let item: ReminderItem
+    
     var body: some View {
         
-        ZStackLayout(alignment: .leading){
+        ZStack(alignment: .leading){
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color(.lightGray))
                 .frame(height: 150)
             
             VStack(alignment: .leading, spacing: 5){
                 
-                Text("Message Content: \(ReminderItem.messageContent)")
-                Text("Sent By: \(ReminderItem.sentBy)")
-                Text("Remind me By: \(ReminderItem.remindMeBy)")
+                Text("Message Content: \(item.messageContent)")
+                Text("Sent By: \(item.sentBy)")
+                Text("Remind me By: \(item.remindMeBy)")
             }
             .padding(.all, 10)
             
@@ -30,5 +33,5 @@ struct ItemView: View {
 }
 
 #Preview {
-    ItemView()
+    ItemView(item: exampleItem)
 }

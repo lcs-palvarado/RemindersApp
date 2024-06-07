@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct ReminderItem {
+struct ReminderItem: Identifiable {
+    var id = UUID()
     var messageContent: String
     var sentBy: String
     var remindMeBy: String
@@ -15,4 +16,4 @@ struct ReminderItem {
     
 }
 
-let ReminderItems = ReminderItem(messageContent: "", sentBy: "", remindMeBy: "")
+let exampleItem = ReminderItem(messageContent: "call mom", sentBy: "dad", remindMeBy: "Tomorrow")

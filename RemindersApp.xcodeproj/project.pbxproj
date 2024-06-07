@@ -56,6 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				47403AA12C12084500AEF58E /* RemindersAppApp.swift */,
+				47403AB02C1209B900AEF58E /* Model */,
+				47403AAF2C1209B000AEF58E /* View */,
 				47403AA52C12084900AEF58E /* Assets.xcassets */,
 				47403AA72C12084900AEF58E /* Preview Content */,
 			);
@@ -65,7 +67,6 @@
 		47403AA72C12084900AEF58E /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				47403AAF2C1209B000AEF58E /* View */,
 				47403AA82C12084900AEF58E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -76,7 +77,6 @@
 			children = (
 				47403AA32C12084500AEF58E /* ContentView.swift */,
 				47403AB12C1209E300AEF58E /* ItemView.swift */,
-				47403AB02C1209B900AEF58E /* Model */,
 			);
 			path = View;
 			sourceTree = "<group>";
