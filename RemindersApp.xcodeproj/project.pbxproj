@@ -11,6 +11,8 @@
 		47403AA42C12084500AEF58E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47403AA32C12084500AEF58E /* ContentView.swift */; };
 		47403AA62C12084900AEF58E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47403AA52C12084900AEF58E /* Assets.xcassets */; };
 		47403AA92C12084900AEF58E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47403AA82C12084900AEF58E /* Preview Assets.xcassets */; };
+		47403AB22C1209E300AEF58E /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47403AB12C1209E300AEF58E /* ItemView.swift */; };
+		47403AB42C120D6F00AEF58E /* ReminderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47403AB32C120D6F00AEF58E /* ReminderItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		47403AA32C12084500AEF58E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		47403AA52C12084900AEF58E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47403AA82C12084900AEF58E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		47403AB12C1209E300AEF58E /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		47403AB32C120D6F00AEF58E /* ReminderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				47403AA12C12084500AEF58E /* RemindersAppApp.swift */,
-				47403AA32C12084500AEF58E /* ContentView.swift */,
 				47403AA52C12084900AEF58E /* Assets.xcassets */,
 				47403AA72C12084900AEF58E /* Preview Content */,
 			);
@@ -62,9 +65,28 @@
 		47403AA72C12084900AEF58E /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				47403AAF2C1209B000AEF58E /* View */,
 				47403AA82C12084900AEF58E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		47403AAF2C1209B000AEF58E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				47403AA32C12084500AEF58E /* ContentView.swift */,
+				47403AB12C1209E300AEF58E /* ItemView.swift */,
+				47403AB02C1209B900AEF58E /* Model */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		47403AB02C1209B900AEF58E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47403AB32C120D6F00AEF58E /* ReminderItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				47403AA42C12084500AEF58E /* ContentView.swift in Sources */,
+				47403AB22C1209E300AEF58E /* ItemView.swift in Sources */,
+				47403AB42C120D6F00AEF58E /* ReminderItem.swift in Sources */,
 				47403AA22C12084500AEF58E /* RemindersAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
