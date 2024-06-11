@@ -1,5 +1,5 @@
 //
-//  ItemView.swift
+//  ReminderView.swift
 //  RemindersApp
 //
 //  Created by Pablo Alvarado on 06/06/24.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct ItemView: View {
+struct ReminderView: View {
     
-    let item: ReminderItem
+    let reminder: Reminder
     
     var body: some View {
         
@@ -20,9 +20,12 @@ struct ItemView: View {
             
             VStack(alignment: .leading, spacing: 5){
                 
-                Text("Message Content: \(item.messageContent)")
-                Text("Sent By: \(item.sentBy)")
-                Text("Remind me By: \(item.remindMeBy)")
+                Text("Message Content: \(reminder.messageContent)")
+                    .bold()
+                Text("Sent By: \(reminder.sentBy)")
+                    .bold()
+                Text("Remind me By: \(reminder.remindMeBy)")
+                    .bold()
             }
             .padding(.all, 10)
             
@@ -33,5 +36,5 @@ struct ItemView: View {
 }
 
 #Preview {
-    ItemView(item: exampleItem1)
+    ReminderView(reminder: reminder1)
 }

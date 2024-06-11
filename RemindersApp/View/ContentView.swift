@@ -9,14 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let items = exampleItem1
+    //Source of truth for our list of reminders
+    @State private var reminders: [Reminder] = exampleReminders
     
     var body: some View {
         NavigationView {
             VStack{
-                List {
-                    ReminderItem(messageContent: "Call your grandma", sentBy: "Mom", remindMeBy: "Tomorrow")
-                    ReminderItem(messageContent: "Walk the dog", sentBy: "dad", remindMeBy: "This afternoon")
+                List(reminders) { currentReminder in
+                    ReminderView(reminder: currentReminder)
+                   
                 }
                 .searchable(text: Binding.constant(""))
                 Spacer()
@@ -28,6 +29,8 @@ struct ContentView: View {
                         //This would add a new ReminderItem
                     } label: {
                         Image(systemName: "plus")
+                            .buttonStyle(.borderedProminent)
+                            .controlSize(.large)
                     }
                 }
                 
