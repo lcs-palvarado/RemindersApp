@@ -8,14 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let items = exampleItem
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            VStack{
+                List(items) { item in ItemView(item: item)
+                }
+                .searchable(text: Binding.constant(""))
+                Spacer()
+            }
+            .toolbar{
+                
+                ToolbarItem(placement: .topBarTrailing){
+                    Button{
+                        //This would add a new ReminderItem
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+                
+            }
+            .navigationTitle("Media Secretary")
         }
-        .padding()
     }
 }
 
