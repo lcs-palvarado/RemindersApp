@@ -33,5 +33,5 @@ struct ItemView: View {
 }
 
 #Preview {
-    ItemView(item: exampleItem)
+    ItemView(item: exampleItem1)
 }

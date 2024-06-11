@@ -9,12 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let items = exampleItem
+    let items = exampleItem1
     
     var body: some View {
         NavigationView {
             VStack{
-                List(items) { item in ItemView(item: item)
+                List {
+                    ReminderItem(messageContent: "Call your grandma", sentBy: "Mom", remindMeBy: "Tomorrow")
+                    ReminderItem(messageContent: "Walk the dog", sentBy: "dad", remindMeBy: "This afternoon")
                 }
                 .searchable(text: Binding.constant(""))
                 Spacer()

@@ -8,12 +8,31 @@
 import Foundation
 
 struct ReminderItem: Identifiable {
-    var id = UUID()
-    var messageContent: String
-    var sentBy: String
-    var remindMeBy: String
+    let id = UUID()
+    let messageContent: String
+    let sentBy: String
+    let remindMeBy: Date
     
     
 }
 
-let exampleItem = ReminderItem(messageContent: "call mom", sentBy: "dad", remindMeBy: "Tomorrow")
+
+// Create three instances of ReminderItem
+
+let reminder1 = ReminderItem(
+    messageContent: "Don't forget to call the dentist!",
+    sentBy: "Alice",
+    remindMeBy: Date(timeIntervalSinceNow: 3600) // 1 hour from now
+)
+
+let reminder2 = ReminderItem(
+    messageContent: "Meeting with Bob at 3 PM",
+    sentBy: "Work",
+    remindMeBy: Date(timeIntervalSinceNow: 7200) // 2 hours from now
+)
+
+let reminder3 = ReminderItem(
+    messageContent: "Pick up groceries",
+    sentBy: "Mom",
+    remindMeBy: Date(timeIntervalSinceNow: 10800) // 3 hours from now
+)
