@@ -36,3 +36,11 @@ let reminder3 = ReminderItem(
     sentBy: "Mom",
     remindMeBy: Date(timeIntervalSinceNow: 10800) // 3 hours from now
 )
+
+// Example Data
+
+let exampleReminders = [
+reminder1,
+reminder2,
+reminder3
+]
