@@ -14,8 +14,14 @@ struct AddReminderView: View {
     @State private var sentBy: String = ""
     @State private var remindMeBy: Date = Date()
     
+    //Returns true  when any of our input fields don't have a value.
+
+    
     //Allow us to dismiss this sheet
     @Binding var isShowing: Bool
+    
+    //Obtain a reference to the source of truth for our new reminder
+    @Binding var reminders: [Reminder]
 
     //Mark computed properties
     var body: some View {
@@ -37,7 +43,7 @@ struct AddReminderView: View {
                         //...and dismiss sheet
                         isShowing = false
                     } label: {
-                        Text("Add")
+                        Text("Done")
                     }
 
                 }
@@ -47,5 +53,8 @@ struct AddReminderView: View {
 }
 
 #Preview {
-    AddReminderView(isShowing: Binding.constant(true))
+    AddReminderView(isShowing: Binding.constant(true),
+                    reminders: Binding.constant(exampleReminders)
+    )
+    
 }

@@ -42,7 +42,7 @@ struct ContentView: View {
                 
             }
             .sheet(isPresented: $addNewReminderSheetIsShowing) {
-                AddReminderView(isShowing: $addNewReminderSheetIsShowing)
+                AddReminderView(isShowing: $addNewReminderSheetIsShowing, reminders: $reminders)
             }
             .navigationTitle("Media Secretary")
         }
