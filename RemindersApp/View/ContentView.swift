@@ -18,14 +18,19 @@ struct ContentView: View {
     //Source of truth for our list of reminders
     @State private var reminders: [Reminder] = exampleReminders
     
+    //Holds search text provided by user
+    @State private var searchText: String = ""
+    
     var body: some View {
         NavigationView {
             VStack{
-                List(reminders) { currentReminder in
+                List(
+                    filter(reminders: reminders, on: searchText)
+                ) { currentReminder in
                     ReminderView(reminder: currentReminder)
                    
                 }
-                .searchable(text: Binding.constant(""))
+                .searchable(text: $searchText)
                 Spacer()
             }
             .toolbar{
@@ -45,6 +50,32 @@ struct ContentView: View {
                 AddReminderView(isShowing: $addNewReminderSheetIsShowing, reminders: $reminders)
             }
             .navigationTitle("Media Secretary")
+        }
+    }
+    
+    //MARK: functions
+    func filter(reminders: [Reminder], on providedText: String)->
+    [Reminder]{
+      
+        //If provided text is empty return og array
+        if providedText.isEmpty {
+            return reminders
+        } else{
+            
+            //Make empty array of reviews
+            var  filteredReminders: [Reminder] = []
+            
+            //Iterate over existing reviews
+            for reminder in reminders {
+                if reminder.messageContent.contains(providedText){
+                    filteredReminders.append(reminder)
+                    
+                    
+                }
+            }
+            
+            //return the list of reminders that contained provided text
+            return filteredReminders
         }
     }
 }

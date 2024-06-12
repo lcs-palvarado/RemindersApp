@@ -41,7 +41,7 @@ struct AddReminderView: View {
                     Button {
                         //Add new reminder
                         
-                        let newReminder = Reminder(messageContent: messageContent, sentBy: sentBy, remindMeBy: remindMeBy)                        
+                        let newReminder = Reminder(messageContent: messageContent, sentBy: sentBy, remindMeBy: remindMeBy)
                         reminders.append(newReminder)
                         //...and dismiss sheet
                         isShowing = false
