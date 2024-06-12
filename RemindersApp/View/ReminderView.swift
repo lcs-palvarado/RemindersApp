@@ -22,12 +22,15 @@ struct ReminderView: View {
                 
                 Text("Message Content: \(reminder.messageContent)")
                     .bold()
+                    
                 Text("Sent By: \(reminder.sentBy)")
                     .bold()
+
                 Text("Remind me By: \(reminder.remindMeBy)")
                     .bold()
+
             }
-            .padding(.all, 10)
+            .padding(.all, 20)
             
         }
         

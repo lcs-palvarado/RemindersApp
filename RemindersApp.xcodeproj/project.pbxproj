@@ -13,6 +13,7 @@
 		47403AA92C12084900AEF58E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47403AA82C12084900AEF58E /* Preview Assets.xcassets */; };
 		476A2AE42C188AF500FCF6EA /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476A2AE32C188AF500FCF6EA /* ReminderView.swift */; };
 		476A2AE62C188B5100FCF6EA /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476A2AE52C188B5100FCF6EA /* Reminder.swift */; };
+		478C8C232C192A110040E083 /* AddReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478C8C222C192A110040E083 /* AddReminderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		47403AA82C12084900AEF58E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		476A2AE32C188AF500FCF6EA /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
 		476A2AE52C188B5100FCF6EA /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		478C8C222C192A110040E083 /* AddReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				47403AA32C12084500AEF58E /* ContentView.swift */,
 				476A2AE32C188AF500FCF6EA /* ReminderView.swift */,
+				478C8C222C192A110040E083 /* AddReminderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				47403AA42C12084500AEF58E /* ContentView.swift in Sources */,
 				476A2AE42C188AF500FCF6EA /* ReminderView.swift in Sources */,
 				47403AA22C12084500AEF58E /* RemindersAppApp.swift in Sources */,
+				478C8C232C192A110040E083 /* AddReminderView.swift in Sources */,
 				476A2AE62C188B5100FCF6EA /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

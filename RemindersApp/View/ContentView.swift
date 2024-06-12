@@ -9,6 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State var searchText = ""
+    
+    @State var newReminder = ""
+    
     //Source of truth for our list of reminders
     @State private var reminders: [Reminder] = exampleReminders
     
