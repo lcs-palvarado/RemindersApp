@@ -40,6 +40,9 @@ struct AddReminderView: View {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
                         //Add new reminder
+                        
+                        let newReminder = Reminder(messageContent: messageContent, sentBy: sentBy, remindMeBy: remindMeBy)                        
+                        reminders.append(newReminder)
                         //...and dismiss sheet
                         isShowing = false
                     } label: {
