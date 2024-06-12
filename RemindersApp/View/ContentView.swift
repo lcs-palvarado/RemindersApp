@@ -13,6 +13,8 @@ struct ContentView: View {
     
     @State var newReminder = ""
     
+    @State private var addNewReminderSheetIsShowing = false
+    
     //Source of truth for our list of reminders
     @State private var reminders: [Reminder] = exampleReminders
     
@@ -30,7 +32,7 @@ struct ContentView: View {
                 
                 ToolbarItem(placement: .topBarTrailing){
                     Button{
-                        //This would add a new ReminderItem
+                        addNewReminderSheetIsShowing = true
                     } label: {
                         Image(systemName: "plus")
                             .buttonStyle(.borderedProminent)
@@ -38,6 +40,9 @@ struct ContentView: View {
                     }
                 }
                 
+            }
+            .sheet(isPresented: $addNewReminderSheetIsShowing) {
+                AddReminderView()
             }
             .navigationTitle("Media Secretary")
         }
