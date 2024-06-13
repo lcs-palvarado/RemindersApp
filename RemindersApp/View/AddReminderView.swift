@@ -15,14 +15,16 @@ struct AddReminderView: View {
     @State private var remindMeBy: Date = Date()
     
     //Returns true  when any of our input fields don't have a value.
-
+    var atLeastOneInputfieldIsBlank: Bool {
+        return messageContent.isEmpty || sentBy.isEmpty
+    }
     
     //Allow us to dismiss this sheet
     @Binding var isShowing: Bool
     
     //Obtain a reference to the source of truth for our new reminder
     @Binding var reminders: [Reminder]
-
+    
     //Mark computed properties
     var body: some View {
         NavigationStack{
@@ -48,7 +50,7 @@ struct AddReminderView: View {
                     } label: {
                         Text("Done")
                     }
-
+                    .disabled(atLeastOneInputfieldIsBlank)
                 }
             }
         }
