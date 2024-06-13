@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State var searchText = ""
+
     
     @State var newReminder = ""
     
     @State private var addNewReminderSheetIsShowing = false
     
     //Source of truth for our list of reminders
-    @State private var reminders: [Reminder] = exampleReminders
+    @State private var reminders: [Reminder] = []
     
     //Holds search text provided by user
     @State private var searchText: String = ""
@@ -31,7 +30,6 @@ struct ContentView: View {
                    
                 }
                 .searchable(text: $searchText)
-                Spacer()
             }
             .toolbar{
                 
@@ -67,10 +65,8 @@ struct ContentView: View {
             
             //Iterate over existing reviews
             for reminder in reminders {
-                if reminder.messageContent.contains(providedText){
+                if reminder.messageContent.contains(providedText) || reminder.sentBy.contains(providedText) {
                     filteredReminders.append(reminder)
-                    
-                    
                 }
             }
             
