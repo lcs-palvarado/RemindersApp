@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    
     
     @State var newReminder = ""
     
@@ -27,7 +27,11 @@ struct ContentView: View {
                     filter(reminders: reminders, on: searchText)
                 ) { currentReminder in
                     ReminderView(reminder: currentReminder)
-                   
+                        .swipeActions {
+                            Button("Delete", role: .destructive) {
+                                delete(reminder: currentReminder)
+                            }
+                        }
                 }
                 .searchable(text: $searchText)
             }
@@ -54,7 +58,7 @@ struct ContentView: View {
     //MARK: functions
     func filter(reminders: [Reminder], on providedText: String)->
     [Reminder]{
-      
+        
         //If provided text is empty return og array
         if providedText.isEmpty {
             return reminders
@@ -74,8 +78,11 @@ struct ContentView: View {
             return filteredReminders
         }
     }
+    
+    func delete(reminder: Reminder) {
+        reminders.removeAll { $0.id == reminder.id }
+    }
 }
-
 #Preview {
     ContentView()
 }
